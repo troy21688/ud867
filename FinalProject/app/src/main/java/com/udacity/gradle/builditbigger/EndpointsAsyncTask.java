@@ -41,7 +41,8 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
         String name = params[0].second;
 
         try {
-            return myApiService.sayHi(name).execute().getData();
+            //TODO: Why am I unable to access my .getJoke() method?
+            return myApiService.getJo.execute().getData();
         } catch (IOException e) {
             return e.getMessage();
         }
