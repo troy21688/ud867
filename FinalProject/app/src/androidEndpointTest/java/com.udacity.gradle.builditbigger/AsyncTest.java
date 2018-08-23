@@ -8,7 +8,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(AndroidJUnit4.class)
-public class AsyncTest extends AsyncInstrumentedTest {
+public class AsyncTest {
 
     @Rule
     public ActivityTestRule<AndroidActivity> mActivity = new ActivityTestRule(AndroidActivity.class);
@@ -17,10 +17,10 @@ public class AsyncTest extends AsyncInstrumentedTest {
     public void testIfResultIsEmpty() {
 
         //TODO: Why is this class not accessible?
+        //TODO: Why is the editor not accessible?
+
         EndpointAsyncTask endpointAsyncTask = new EndpointAsynctask(getContext, null);
         endpointAsyncTask.execute();
-
-
 
     }
 
