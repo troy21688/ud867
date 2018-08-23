@@ -1,4 +1,4 @@
-package com.troychuinard.builditbiggerandroidlibrary;
+package com.udacity.gradle.builditbigger;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

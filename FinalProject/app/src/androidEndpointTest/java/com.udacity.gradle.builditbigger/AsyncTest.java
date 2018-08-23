@@ -1,4 +1,4 @@
-package com.troychuinard.builditbiggerandroidlibrary;
+package com.udacity.gradle.builditbigger;
 
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
@@ -8,7 +8,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(AndroidJUnit4.class)
-public class AsyncTest extends  AsyncInstrumentedTest {
+public class AsyncTest extends AsyncInstrumentedTest {
 
     @Rule
     public ActivityTestRule<AndroidActivity> mActivity = new ActivityTestRule(AndroidActivity.class);
@@ -16,12 +16,12 @@ public class AsyncTest extends  AsyncInstrumentedTest {
     @Test
     public void testIfResultIsEmpty() {
 
-        EndpointAsyncTask endpointAsyncTask = new EndpointAsynctask(getCo)
+        //TODO: Why is this class not accessible?
+        EndpointAsyncTask endpointAsyncTask = new EndpointAsynctask(getContext, null);
+        endpointAsyncTask.execute();
+
+
+
     }
-
-    @Test
-
-
-
 
 }
