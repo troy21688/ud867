@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
             return true;
         }
 
@@ -52,10 +53,10 @@ public class MainActivity extends AppCompatActivity {
         new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
     }
 
-    public void newActivity(View view) {
-        Intent i = new Intent(this, AndroidActivity.class);
-        startActivity(i);
-    }
+//    public void newActivity(View view) {
+//        Intent i = new Intent(this, AndroidActivity.class);
+//        startActivity(i);
+//    }
 
 
 }

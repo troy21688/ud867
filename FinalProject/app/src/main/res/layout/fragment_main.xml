@@ -24,14 +24,14 @@
         android:text="@string/button_text" />
 
 
-    <Button
-        android:layout_marginLeft="2dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/first_button"
-        android:layout_below="@+id/instructions_text_view"
-        android:onClick="newActivity"
-        android:text="@string/test" />
+    <!--<Button-->
+        <!--android:layout_marginLeft="2dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_toRightOf="@+id/first_button"-->
+        <!--android:layout_below="@+id/instructions_text_view"-->
+        <!--android:onClick="newActivity"-->
+        <!--android:text="@string/test" />-->
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
