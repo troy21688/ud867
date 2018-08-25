@@ -1,6 +1,7 @@
 package com.udacity.gradle.builditbigger;
 
 import android.support.test.espresso.Espresso;
+import android.support.test.espresso.ViewAssertion;
 import android.support.test.espresso.action.ViewActions;
 import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
@@ -21,14 +22,17 @@ public class AsyncTest {
 
     private static final String TEST_TEXT = "TEST_TEXT";
     @Rule
-    public ActivityTestRule<MainActivity> mActivity = new ActivityTestRule(MainActivity.class);
+    public ActivityTestRule mActivity = new ActivityTestRule(MainActivity.class);
 
     @Test
     public void testIfResultIsEmpty() {
 
         Espresso.onView(ViewMatchers.withId(R.id.first_button)).perform(ViewActions.click());
+        Espresso.onView(ViewMatchers.withId(R.id.random_joke)).check(ViewAssertion(j))
 
 
     }
+
+
 
 }
