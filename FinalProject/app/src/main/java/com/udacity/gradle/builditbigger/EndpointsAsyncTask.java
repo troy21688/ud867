@@ -44,7 +44,7 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
         String name = params[0].second;
 
         try {
-            //TODO: Why am I unable to access my .getJoke() method?
+            //TODO: Why must I generate a try/catch? There was an error without it. How do I know when try/catch is necessary?
             return myApiService.getJoke().execute().getData();
         } catch (IOException e) {
             return e.getMessage();
