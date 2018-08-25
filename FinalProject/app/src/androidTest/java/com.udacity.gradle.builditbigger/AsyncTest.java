@@ -1,8 +1,14 @@
 package com.udacity.gradle.builditbigger;
 
+import android.support.test.espresso.Espresso;
+import android.support.test.espresso.action.ViewActions;
+import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.util.Log;
+import android.test.AndroidTestCase;
+import android.view.View;
+
 
 import com.troychuinard.builditbiggerandroidlibrary.AndroidActivity;
 
@@ -15,21 +21,13 @@ public class AsyncTest {
 
     private static final String TEST_TEXT = "TEST_TEXT";
     @Rule
-    public ActivityTestRule<AndroidActivity> mActivity = new ActivityTestRule(AndroidActivity.class);
+    public ActivityTestRule<MainActivity> mActivity = new ActivityTestRule(MainActivity.class);
 
     @Test
     public void testIfResultIsEmpty() {
 
-        EndpointsAsyncTask endpointsAsyncTask = new EndpointsAsyncTask();
-        endpointsAsyncTask.execute();
+        Espresso.onView(ViewMatchers.withId(R.id.first_button)).perform(ViewActions.click());
 
-        //TODO: Why am I receiving this error
-        try {
-            String testText = endpointsAsyncTask.get();
-            Log.v(TEST_TEXT, testText);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
 
     }
 
