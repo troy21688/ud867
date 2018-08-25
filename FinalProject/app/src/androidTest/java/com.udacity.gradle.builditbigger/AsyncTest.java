@@ -22,13 +22,15 @@ public class AsyncTest {
 
     private static final String TEST_TEXT = "TEST_TEXT";
     @Rule
-    public ActivityTestRule mActivity = new ActivityTestRule(MainActivity.class);
+    public ActivityTestRule<MainActivity> mActivity = new ActivityTestRule(MainActivity.class);
 
     @Test
     public void testIfResultIsEmpty() {
 
+        //TODO: Why is this test passing, yet I do not see it loading on the emulator? I would expect to see it populate the UI on my emulator and click the button
         Espresso.onView(ViewMatchers.withId(R.id.first_button)).perform(ViewActions.click());
-        Espresso.onView(ViewMatchers.withId(R.id.random_joke)).check(ViewAssertion(j))
+        //How do I check that text has populated?
+//        Espresso.onView(ViewMatchers.withId(R.id.random_joke)).check()
 
 
     }
