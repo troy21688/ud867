@@ -27,6 +27,7 @@ public class AsyncTest {
     @Rule
     public ActivityTestRule<MainActivity> mActivity = new ActivityTestRule(MainActivity.class);
 
+    //TODO: Is this approach the correct method of testing the AsyncTask? I am testing views right now, I understand I could also create an instance of the EndpointAsyncTask class and run .execute()
     @Test
     public void testIfResultIsEmpty() {
         Espresso.onView(ViewMatchers.withId(R.id.first_button)).perform(ViewActions.click());
