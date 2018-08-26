@@ -17,6 +17,9 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
+
 @RunWith(AndroidJUnit4.class)
 public class AsyncTest {
 
@@ -26,15 +29,8 @@ public class AsyncTest {
 
     @Test
     public void testIfResultIsEmpty() {
-
-        //TODO: Why is this test passing, yet I do not see it loading on the emulator? I would expect to see it populate the UI on my emulator and click the button
         Espresso.onView(ViewMatchers.withId(R.id.first_button)).perform(ViewActions.click());
-        //How do I check that text has populated?
-//        Espresso.onView(ViewMatchers.withId(R.id.random_joke)).check()
-
-
+        Espresso.onView(ViewMatchers.withId(R.id.random_joke)).check(matches(isDisplayed()));
     }
-
-
 
 }
