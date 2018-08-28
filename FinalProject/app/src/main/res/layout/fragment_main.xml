@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivityFragment">
+    tools:context=".FreeMainActivityFragment">
 
     <TextView
         android:id="@+id/instructions_text_view"
@@ -23,15 +23,6 @@
         android:onClick="tellJoke"
         android:text="@string/button_text" />
 
-
-    <!--<Button-->
-        <!--android:layout_marginLeft="2dp"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_toRightOf="@+id/first_button"-->
-        <!--android:layout_below="@+id/instructions_text_view"-->
-        <!--android:onClick="newActivity"-->
-        <!--android:text="@string/test" />-->
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"

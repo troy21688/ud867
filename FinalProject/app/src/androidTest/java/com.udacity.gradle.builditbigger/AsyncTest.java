@@ -6,12 +6,7 @@ import android.support.test.espresso.action.ViewActions;
 import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import android.util.Log;
-import android.test.AndroidTestCase;
-import android.view.View;
 
-
-import com.troychuinard.builditbiggerandroidlibrary.AndroidActivity;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -25,7 +20,7 @@ public class AsyncTest {
 
     private static final String TEST_TEXT = "TEST_TEXT";
     @Rule
-    public ActivityTestRule<MainActivity> mActivity = new ActivityTestRule(MainActivity.class);
+    public ActivityTestRule<PaidMainActivity> mActivity = new ActivityTestRule(PaidMainActivity.class);
 
     //TODO: Is this approach the correct method of testing the AsyncTask? I am testing views right now, I understand I could also create an instance of the EndpointAsyncTask class and run .execute()
     @Test

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v4.util.Pair;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.google.api.client.extensions.android.http.AndroidHttp;
@@ -47,7 +48,9 @@ class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, String> 
             //TODO: Why must I generate a try/catch? There was an error without it. How do I know when try/catch is necessary? In what situations?
             return myApiService.getJoke().execute().getData();
         } catch (IOException e) {
-            return e.getMessage();
+            Log.v("ERROR", e.getMessage());
+            String x = null;
+            return x;
         }
     }
 
