@@ -33,11 +33,11 @@ android {
     }
 
     //TODO: Followed tutorial here on how to create free vs. paid: https://www.myandroidsolutions.com/2016/06/18/android-free-paid-versions-tutorial/#.W4LBH5NKhTY
-    flavorDimensions 'free','paid' //here defined dimensions
+    flavorDimensions 'tier' //here defined dimensions
     //TODO: I am following these instructions: https://stackoverflow.com/questions/44105127/android-studio-3-0-flavor-dimension-issue
     productFlavors {
         free {
-            dimension 'free'
+            dimension 'tier'
             applicationId "com.udacity.gradle.builditbigger.free"
             versionName "1.0-free"
             // this boolean can be accessed in java classes by using BuildConfig class
@@ -46,7 +46,7 @@ android {
         }
 
         paid {
-            dimension 'paid'
+            dimension 'tier'
             applicationId "com.udacity.gradle.builditbigger.paid"
             versionName "1.0-paid"
             buildConfigField "boolean", "PAID_VERSION", "true"

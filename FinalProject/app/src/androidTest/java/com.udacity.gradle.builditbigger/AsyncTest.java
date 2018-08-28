@@ -20,7 +20,7 @@ public class AsyncTest {
 
     private static final String TEST_TEXT = "TEST_TEXT";
     @Rule
-    public ActivityTestRule<PaidMainActivity> mActivity = new ActivityTestRule(PaidMainActivity.class);
+    public ActivityTestRule<MainActivity> mActivity = new ActivityTestRule(MainActivity.class);
 
     //TODO: Is this approach the correct method of testing the AsyncTask? I am testing views right now, I understand I could also create an instance of the EndpointAsyncTask class and run .execute()
     @Test
